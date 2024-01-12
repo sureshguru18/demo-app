@@ -3,4 +3,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "Gitops with ArgoCD"
+    return "This is a live demo for Gitops with Argocd"
