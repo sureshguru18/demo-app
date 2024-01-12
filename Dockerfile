@@ -1,12 +1,14 @@
-# syntax=docker/dockerfile:1
 
-FROM python:3.8-slim-buster
+FROM python:3.6
 
-WORKDIR /app
+ENV PYTHONDONTWRITEBYTECODE 1
 
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
+ENV PYTHONUNBUFFERED 1
 
-COPY . .
+ADD . /code
 
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0"]
+WORKDIR /code
+
+RUN pip install -r requirements.txt
+
+CMD ["python", "app.py"]
