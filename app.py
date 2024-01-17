@@ -3,4 +3,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "Gitops Demo with ArgoCD"
+    return "ArgoCD Demo for Roshan"
