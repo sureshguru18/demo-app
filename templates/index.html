@@ -1,0 +1,20 @@
+<h3>This is an apple</h3>
+
+<img src="{{ url_for('static', filename='images/apple.jpg') }}" class="image" />
+
+<h3>This is an orange</h3>
+
+<img
+  src="{{ url_for('static', filename='images/orange.jpeg') }}"
+  class="image"
+/>
+
+<h3>This is a pear</h3>
+
+<img src="{{ url_for('static', filename='images/pear.jpeg') }}" class="image" />
+
+<style>
+  .image {
+    width: 200px;
+  }
+</style>
